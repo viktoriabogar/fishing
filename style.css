@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: #323442;
+}
+.container {
+    width: 600px;
+    background-color: #EEEEEE;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.image-container {
+    display: flex;
+    justify-content: space-around;
+}
+.mscard-image, .visa-image {
+    width: 150px;
+    height: 100px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button {
+    width: 100px;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+.notification {
+    position: absolute;
+    color: green;
+    background-color: greenyellow;
+    padding: 1rem;
+    display: none;
+}
