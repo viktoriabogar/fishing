@@ -1,8 +1,12 @@
 function validateForm(event) {
+    event.preventDefault();
+
     const ccn = event.target[0].value;
     const dateM = event.target[1].value;
     const dateY = event.target[2].value;
     const cvv = event.target[3].value;
+
+    if(!(ccn && dateM && dateY && cvv)) return false
 
     const notification = document.getElementById('notification');
     notification.style.display = 'block'

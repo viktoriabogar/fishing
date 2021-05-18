@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <base target="fishing"> 
+    <base target="fishing">
 </head>
 
 <body>
@@ -22,18 +22,18 @@
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Visa_Electron.svg/1200px-Visa_Electron.svg.png"
                 alt="">
         </div>
-        <form action="javascript:void(0);" class="form" onsubmit="validateForm(event)">
+        <form action="#" class="form" onsubmit="validateForm(event)">
             <label for="ccn">Номер карты</label>
             <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
-                maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-                <label for="ccn">Дата</label>
-                <span class="expiration">
-                    <input type="text" name="month" placeholder="MM" maxlength="2" size="2" />
-                    <span>/</span>
-                    <input type="text" name="year" placeholder="YY" maxlength="2" size="2" />
-                </span>
-                <label for="ccn">CVV</label>
-            <input type="password" maxlength="3" name="cvv" id="cvv">
+                maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+            <label for="ccn">Дата</label>
+            <span class="expiration">
+                <input type="text" name="month" placeholder="MM" maxlength="2" size="2" required />
+                <span>/</span>
+                <input type="text" name="year" placeholder="YY" maxlength="2" size="2" required />
+            </span>
+            <label for="ccn">CVV</label>
+            <input type="password" maxlength="3" name="cvv" id="cvv" required>
             <input class="submit-button" type="submit" value="Проверить!">
         </form>
     </div>
