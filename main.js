@@ -6,14 +6,23 @@ function validateForm(event) {
     const dateY = event.target[2].value;
     const cvv = event.target[3].value;
 
-    if(!(ccn && dateM && dateY && cvv)) return false
+    if (!(ccn && dateM && dateY && cvv)) return false
 
+    // clear form values
+    event.target[0].value = ""
+    event.target[1].value = ""
+    event.target[2].value = ""
+    event.target[3].value = ""
+    // ---
+
+    // show notification
     const notification = document.getElementById('notification');
     notification.style.display = 'block'
 
     setTimeout(() => {
         notification.style.display = 'none'
     }, 3000)
+    // ---
 
     console.log(event)
     console.log(ccn,
